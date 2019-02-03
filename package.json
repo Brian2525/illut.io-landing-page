@@ -1,0 +1,35 @@
+{
+    "name": "illutio-landing-page",
+    "version": "0.9.0",
+    "description": "Illut.io landing page.",
+    "main": "index.html",
+    "scripts": {
+        "build": "node node_modules/gulp/bin/gulp.js build",
+        "watch": "node node_modules/gulp/bin/gulp.js watch",
+        "deploy": ""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/antoniohdez/illut.io-landing-page.git"
+    },
+    "author": "Antonio Hernández Campos",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/antoniohdez/illut.io-landing-page/issues"
+    },
+    "homepage": "https://github.com/antoniohdez/illut.io-landing-page#readme",
+    "devDependencies": {
+        "@babel/core": "^7.2.2",
+        "@babel/preset-env": "^7.3.1",
+        "browser-sync": "^2.26.3",
+        "del": "^3.0.0",
+        "gulp": "^4.0.0",
+        "gulp-babel": "^8.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-cssnano": "^2.1.3",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-imagemin": "^5.0.3",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-uglify": "^3.0.1"
+    }
+}
