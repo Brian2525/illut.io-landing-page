@@ -50,11 +50,15 @@ gulp.task( 'html', function() {
 gulp.task( 'build', gulp.parallel( 'css', 'js', 'img', 'html' ) );
 
 gulp.task( 'watch', function() {
+    gulp.series( 'build', 'serve' )();
+
     gulp.watch( './assets/css/**/*.css', gulp.series( 'css' ) );
     gulp.watch( './assets/js/**/*.js', gulp.series( 'js' ) );
     gulp.watch( './assets/img/**/*.img', gulp.series( 'img' ) );
     gulp.watch( [ './*.html', './assets/**/*.html' ], gulp.series( 'html' ) );
+});
 
+gulp.task( 'serve', function() {
     browserSync.init({
         server: './build'
     });
