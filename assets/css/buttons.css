@@ -1,0 +1,29 @@
+.button {
+    color: white;
+    background: #42A7E0;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: none;
+    padding: .8em 2em;
+}
+
+.button:hover {
+    filter: brightness(97%);
+}
+
+.button--white,
+.button--outline:hover {
+    background: white;
+    color: #3468A9;
+}
+
+.button--outline {
+    background: transparent;
+    border: 2px solid white;
+}
