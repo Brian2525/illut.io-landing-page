@@ -1,5 +1,5 @@
 .button {
-    color: white;
+    color: white !important;
     background: #42A7E0;
     border: none;
     border-radius: .5em;
@@ -10,7 +10,7 @@
     text-decoration: none;
     text-transform: uppercase;
     outline: none;
-    padding: .8em 2em;
+    padding: 1em 2em;
 }
 
 .button:hover {
@@ -20,10 +20,16 @@
 .button--white,
 .button--outline:hover {
     background: white;
-    color: #3468A9;
+    color: #3468A9 !important;
 }
 
 .button--outline {
     background: transparent;
     border: 2px solid white;
+}
+
+.button--150 {
+    max-width: 150px;
+    text-align: center;
+    width: 150px;
 }

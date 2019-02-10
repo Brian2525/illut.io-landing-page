@@ -1,0 +1,122 @@
+.grid {
+    background: #306AB6;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat( 5, 1fr );
+    grid-auto-rows: 350px;
+}
+
+.grid h1, .grid h2, .grid h3, .grid h4, .grid h5, .grid h6 {
+    font-weight: lighter;
+    margin: .3em 0;
+}
+
+.grid__item {
+    box-sizing: content-box;
+    font-size: 2em;
+    position: relative;
+}
+
+.grid__item--span-2 { grid-column: span 2; }
+.grid__item--span-3 { grid-column: span 3; }
+.grid__item--span-4 { grid-column: span 4; }
+.grid__item--span-5 { grid-column: span 5; }
+
+.item {
+    height: inherit;
+    display: flex;
+}
+
+.item__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2rem;
+    z-index: 1;
+}
+
+.item__buttons--vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.item__content--left {
+    max-width: 50%;
+    width: 50%;
+}
+
+.item__content--left-large {
+    max-width: 60%;
+    width: 60%;
+}
+
+.item__content--small {
+    max-width: 40%;
+    width: 40%;
+}
+
+.item__content--right {
+    margin-left: 50%;
+    text-align: right;
+}
+
+.item__content--right-large {
+    margin-left: 40%;
+    text-align: right;
+}
+
+.item__content--right-small {
+    margin-left: 60%;
+    text-align: right;
+}
+
+.item__background {
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.item__background--filter {
+    filter: brightness( 60% );
+}
+
+.item__background-1 {
+    background-image: url( "../img/1.png" );
+}
+
+.item__background-2 {
+    background-image: url( "../img/2.png" );
+}
+
+.item__background-3 {
+    background-image: url( "../img/3.png" );
+}
+
+.item__background-4 {
+    background-image: url( "../img/4.png" );
+}
+
+.item__background-5 {
+    background-image: url( "../img/5.png" );
+}
+
+.item__background-6 {
+    background-image: url( "../img/6.jpg" );
+}
+
+.item__background-7 {
+    background-image: url( "../img/7.png" );
+}
+
+.item__background-8 {
+    background-image: url( "../img/8.jpg" );
+}
+
+.item__background-9 {
+    background-image: url( "../img/9.jpg" );
+}
