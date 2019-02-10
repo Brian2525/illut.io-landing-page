@@ -54,7 +54,7 @@ gulp.task( 'watch', function() {
 
     gulp.watch( './assets/css/**/*.css', gulp.series( 'css' ) );
     gulp.watch( './assets/js/**/*.js', gulp.series( 'js' ) );
-    gulp.watch( './assets/img/**/*.img', gulp.series( 'img' ) );
+    gulp.watch( './assets/img/**/*.{png,jpg,jpeg,gif,svg}', gulp.series( 'img' ) );
     gulp.watch( [ './*.html', './assets/**/*.html' ], gulp.series( 'html' ) );
 });
 
