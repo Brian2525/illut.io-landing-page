@@ -10,7 +10,10 @@
 
 .header__logo {
     align-self: center;
-    background: lightgray;
+    background-image: url( "../img/illutio-logo.png" );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 105px;
     margin-right: .5rem;
     min-width: 120px;
