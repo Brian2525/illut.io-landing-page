@@ -13,3 +13,9 @@ html, body {
     padding: 0;
     width: 100%;
 }
+
+.container {
+    margin: 0 auto;
+    padding: 1rem;
+    width: 960px;
+}
