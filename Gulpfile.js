@@ -12,7 +12,7 @@ const browserSync = require( 'browser-sync' ).create();
 gulp.task( 'css', function() {
     del.sync([ './build/assets/css' ]);
 
-    return gulp.src( './assets/css/**/*.css' )
+    return gulp.src( './src/assets/css/**/*.css' )
         .pipe( sourcemaps.init() )
         .pipe( cssnano() )
         .pipe( sourcemaps.write( '.' ) )
@@ -22,7 +22,7 @@ gulp.task( 'css', function() {
 gulp.task( 'js', function() {
     del.sync([ './build/assets/js' ]);
 
-    return gulp.src( './assets/js/**/*.js' )
+    return gulp.src( './src/assets/js/**/*.js' )
         .pipe( sourcemaps.init() )
         .pipe( babel({ presets: [ '@babel/env' ] }) )
         .pipe( uglify() )
@@ -34,7 +34,7 @@ gulp.task( 'js', function() {
 gulp.task( 'img', function() {
     del.sync([ './build/assets/img' ]);
 
-    return gulp.src( './assets/img/**/*.{png,jpg,jpeg,gif,svg}' )
+    return gulp.src( './src/assets/img/**/*.{png,jpg,jpeg,gif,svg}' )
         .pipe( imagemin({ verbose: true }) )
         .pipe( gulp.dest( './build/assets/img' ) );
 });
@@ -42,7 +42,7 @@ gulp.task( 'img', function() {
 gulp.task( 'html', function() {
     del.sync([ './build/*.html', './build/assets/**/*.html', '!./build/assets' ]);
 
-    return gulp.src( [ './*.html', './assets/**/*.html' ] )
+    return gulp.src( [ './src/*.html', './src/assets/**/*.html' ] )
         .pipe( htmlmin({ collapseWhitespace: true, removeComments: true }) )
         .pipe( gulp.dest( './build' ) );
 });
@@ -52,10 +52,10 @@ gulp.task( 'build', gulp.parallel( 'css', 'js', 'img', 'html' ) );
 gulp.task( 'watch', function() {
     gulp.series( 'build', 'serve' )();
 
-    gulp.watch( './assets/css/**/*.css', gulp.series( 'css' ) );
-    gulp.watch( './assets/js/**/*.js', gulp.series( 'js' ) );
-    gulp.watch( './assets/img/**/*.{png,jpg,jpeg,gif,svg}', gulp.series( 'img' ) );
-    gulp.watch( [ './*.html', './assets/**/*.html' ], gulp.series( 'html' ) );
+    gulp.watch( './src/assets/css/**/*.css', gulp.series( 'css' ) );
+    gulp.watch( './src/assets/js/**/*.js', gulp.series( 'js' ) );
+    gulp.watch( './src/assets/img/**/*.{png,jpg,jpeg,gif,svg}', gulp.series( 'img' ) );
+    gulp.watch( [ './src/*.html', './src/assets/**/*.html' ], gulp.series( 'html' ) );
 });
 
 gulp.task( 'serve', function() {
