@@ -17,5 +17,5 @@ html, body {
 .container {
     margin: 0 auto;
     padding: 1rem;
-    width: 960px;
+    max-width: 1140px;
 }
